@@ -23,10 +23,11 @@ def create_blog_view(request):
 		#author = Account.objects.filter(email=user.username).first()
     #author = request.user
 		obj.author = request.user
-    
+    #context['success_message'] = "Updated"
 		obj.save()
+	   
 		form = CreateBlogPostForm()
-
+#context['success_message'] = "Updated"
 	context['form'] = form
 
 	return render(request, "blog/create_blog.html", context)

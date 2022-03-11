@@ -25,6 +25,7 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 # from django.conf.urls import url
 #from uploader import views
 from blog import urls
@@ -33,6 +34,18 @@ from accountss.views import registration_view, logout_view,login_view,account_vi
 from blog.views import create_blog_view,detail_blog_view,edit_blog_view,get_blog_queryset
 
 from personal.views import home_screen_view
+
+from personal.views import (
+	home_screen_view,
+)
+
+from accountss.views import (
+    registration_view,
+    logout_view,
+    login_view,
+    account_view,
+	must_authenticate_view,
+)
 # from accountss import urls
 
 #from django.conf.urls import url
@@ -83,29 +96,27 @@ urlpatterns = [
    # url(r'^main/$', views.main, name='main'),
    # url(r'^downloads/$', views.simple_upload, name='simple_upload'),
    path('blogs/', home_screen_view, name="home"),
-    path('blogss/account/', account_view, name="account"),
+    path('blogs-account/', account_view, name="account"),
     path('blogs/admin/', admin.site.urls),
     path('blog/', include('blog.urls', 'blog')),
-    path('blogs/login/', login_view, name="login"),
-    path('blogs/logout/', logout_view, name="logout"),
-	path('blogs/must_authenticate/', must_authenticate_view, name="must_authenticate"),
-    path('blogs/register/', registration_view, name="register"),
+    path('blogs-account/login/', login_view, name="login"),
+    path('blogs-account/logout/', logout_view, name="logout"),
+	path('blogs-account/must_authenticate/', must_authenticate_view, name="must_authenticate"),
+    path('blogs-account/register/', registration_view, name="register"),
+    path('blogs-account/password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
+        name='password_change_done'),
 
-    # Password reset links (ref: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
-    #path('blogs/password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
-        #name='password_change_done'),
+    path('blogs-account/password_change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change.html'), 
+        name='password_change'),
 
-    #path('blogs/password_change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change.html'), 
-        #name='password_change'),
+    path('blogs-account/password_reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_done.html'),
+     name='password_reset_done'),
 
-    #path('blogs/password_reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_done.html'),
-     #name='password_reset_done'),
-
-    #path('blogs/reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
-    #path('blogs/password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
+    path('blogs-account/reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('blogs-account/password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
     
-    #path('blogs/reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
-     #name='password_reset_complete'),
+    path('blogs-account/reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
+     name='password_reset_complete'),
 ]
 
 
