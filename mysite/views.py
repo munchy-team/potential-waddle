@@ -3,9 +3,9 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
-from uploader.models import Document
+#from uploader.models import Document
 from django.contrib.auth.decorators import login_required
-from progress.models import Availability, Message
+#from progress.models import Availability, Message
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib import admin
@@ -19,9 +19,9 @@ def home(request):
   return render(request, 'progress/home.html', {'messages': messages, 'availabilitys' : availabilitys })
 
 def realhomepage(request):
-  availabilitys = Availability.objects.all()
-  messages = Message.objects.all().order_by('-Posted_At')
-  return render(request, 'progress/homepage.html', {'messages': messages, 'availabilitys' : availabilitys })
+ # availabilitys = Availability.objects.all()
+ # messages = Message.objects.all().order_by('-Posted_At')
+  return render(request, 'homepage.html')#, {'messages': messages, 'availabilitys' : availabilitys })
 
 # class MessageDelete(DeleteView):
 #    model = Message

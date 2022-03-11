@@ -26,7 +26,7 @@ from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 # from django.conf.urls import url
-from uploader import views
+#from uploader import views
 from blog import urls
 #from accountss import urls
 from accountss.views import registration_view, logout_view,login_view,account_view,must_authenticate_view
@@ -59,7 +59,7 @@ urlpatterns = [
     path('home', views.home),
     path('firstview', TemplateView.as_view(template_name="firstview.html")),
     path('progress', views.progress),
-    path('progress/', include('progress.urls')),
+   # path('progress/', include('progress.urls')),
     path('test/', views.test),
     path('navigation/', views.navigation),
     path('links/', views.navigation),
