@@ -19,18 +19,7 @@ def index(request):
 ```
 
 2. Add a url pattern under `mysite/urls.py`. It should look like this:
-   # help !!!!!!!!!!
-   #this exploded did'nt it
-   idk me about to get very mad if my work go boom....
-   #ok its all gone
-   # AQRGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH go back nowwwwwwww#hhhhh
-   # wait.
-   
-   #or is it check
-   #no it broke git
-   #but i see the folder called blog
-   
-```
+  
 from django.contrib import admin
 from django.urls import path
 from . import views
