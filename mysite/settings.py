@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 
+
 #CSRF_FAILURE_VIEW = "mysite"
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -197,3 +198,4 @@ SOCIALACCOUNT_PROVIDERS = {
 
 
 #Btw im going to try to add discord as a sign in option later [Hudson]
+DJANGO_SETTINGS_MODULE= 'mysite.settings'
