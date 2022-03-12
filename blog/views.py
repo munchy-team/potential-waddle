@@ -69,7 +69,7 @@ def edit_blog_view(request, slug):
 			initial = {
 					"title": blog_post.title,
 					"body": blog_post.body,
-					"image": blog_post.image,
+					#"image": blog_post.image,
          # "author1": blog_post.author,
 			}
 		)
