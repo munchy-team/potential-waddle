@@ -74,263 +74,217 @@
   </head>
   <body class="bg-dark">
     
-    <main class="bg-dark text-light">
-    <!--<nav class="bg-dark">
-      <div class="py-2 px-3 bg-dark text-white">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-              <img src="logo1-1-removebg-preview-5.png" alt="logo" class="bi me-2" height="55" width="55" role="img">
-             <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-            </a>
-  
-            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1 " width="24" height="24"><use xlink:href="#home"/></svg>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
-                  Profile
-                </a>
-              </li>
-           <!--   <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
-                  Dashboard
-                </a>
-              </li> 
-              
-              <li>
-                <a href="#" class="nav-link text-white">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
-                  Munchy Sites
-                </a>
-              </li> 
-              <li>
-                <a href="#" class="nav-link text-white text-center">
-                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
-                  Munchy Apps
-                </a>
-              </li>
-              <span class="nav-link text-light active">
-                <a class="m-md-2 btn btn-outline-light" role="button" href="/accounts/login">Log In</a>
-            </span>
-            </ul>
-  
-          </div>
-        </div>
-      </div>
-      
-      <div class="px-3 py-2 border-bottom mb-3">
-        <div class="container d-flex flex-wrap justify-content-center">
-          <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
-    
-        </div>
-      </div>
-    </nav>
-  
- <div class="b-example-divider"></div> -->
- <nav class="navbar navbar-dark bg-dark static-top">
-  <div class="container-fluid">
-   <h5 class="mt-2 mb-0"> <a class="navbar-brand mt-lg-5" href="#">  <img src="../../static/logo1-1-removebg-preview-5.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
-    MunchySite Questions</a></h5>
-    <span class="nav-link text-light active px-5 navbar-btn ms-auto" style="text-align: right; display: inline-block;">
-      {% if user.is_authenticated %}
-      <strong>  Hello, {{user.username }}!</strong>
-      <a class="text-right btn btn-outline-light mx-2" role="button" href="/accounts/logout">Log Out</a>
-
-      {% else %}
-      <a class="text-right btn btn-outline-light mx-2" role="button" href="/accounts/login">Log In</a>
-      <a class="text-right btn btn-outline-light" role="button" href="/admin/">Register</a>
-  </span>
-
-    {% endif %}
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
+      <main class="bg-dark text-light">
         
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><h5 class="mt-2 mb-0"> <a class="navbar-brand mt-lg-5" href="#">  <img src="../static/logo1-1-removebg-preview-5.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
-          MunchySite Questions</a></h5></h5>
-        <button type="button" class="btn-close text-reset bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Log In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Post a Question</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Check for Post Replies</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              MunchyTeam Suite Tools
-            </a>
-          
-            <ul class="dropdown-menu bg-dark text-light " aria-labelledby="offcanvasNavbarDropdown">
-              <li><a class="dropdown-item bg-dark text-light" href="#">MunchySite</a></li>
-              <li>
-                <hr class="dropdown-divider bg-white">
-              </li>
-              <li><a class="dropdown-item bg-dark text-light btn-outline-light" href="#">MunchyApps</a></li>
-              <li>
-                <hr class="dropdown-divider bg-white">
-              </li>
-              
-              <li><a class="dropdown-item bg-dark text-light btn-outline-light" href="#">MunchySite Questions</a></li>
-              <li>
-                <hr class="dropdown-divider bg-white">
-              </li>
-              <li><a class="dropdown-item bg-dark text-light btn-outline-light" href="#">MunchySite Answers</a></li>
-              <li>
-                <hr class="dropdown-divider bg-white">
-              </li>
-              <li><a class="dropdown-item bg-dark text-light btn-outline-light" href="#">MunchyTeam</a></li>
-            </ul>
-          </li>
-        </ul>
-        <br>
-        <br>
-        <!--
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> -->
-      </div>
-    </div>
-  </div>
-</nav>
-  <div class="b-example-divider"></div>
-      <h1 class="visually-hidden">Heroes examples</h1>
-    
-  <div class="px-4 py-5 my-5 text-center bg-dark text-light">
-    
-    <img class="d-block mx-auto mb-2" src="../../static/logo1-1-removebg-preview-5.png" alt="" width="100" height="100">
-    <h1 class="display-5 fw-bold mb-3">MunchySite Questions</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">The mindblowing and easy resource that allows you to become smarter and stronger without stressing a lot. </p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-outline-light btn-lg px-4 gap-3">Sign Up</button>
-        <button type="button" class="btn btn-outline-light btn-lg px-4">Go to MunchySite Questions</button>
-      
-      </div>
-    </div>
-  </div>
+          <nav class="navbar navbar-dark bg-dark static-top">
+              <div class="container-fluid">
+                  <h5 class="mt-2 mb-0">
+                      <a class="navbar-brand mt-lg-5" href="#">
+                          <img src="../../static/logo1-1-removebg-preview-5.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                          MunchySite Questions
+                      </a>
+                  </h5>
+                  <span class="nav-link text-light active px-5 navbar-btn ms-auto" style="text-align: right; display: inline-block;">
+                      {% if user.is_authenticated %}
+                      <strong>  Hello, {{user.username }}!</strong>
+                      <a class="text-right btn btn-outline-light mx-2" role="button" href="/accounts/logout">Log Out</a>
 
-  <div class="b-example-divider"></div>
+                      {% else %}
 
-  <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h1 class="display-4 fw-bold">A convinient way to get your questions solved.  </h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Have you ever had a question about something you are learning that stopped you from doing whatever you were doing? Well, MunchySite Questions is here to for you to ask questions about math, language arts, social studies, and computer science.*   </p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Sign Up Now</button>
-   
-      </div>
-    </div>
-    <div class="overflow-hidden" style="max-height: 30vh;">
-      <div class="container px-5">
-        <img src="../../static/pic1-1.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-      </div>
-    </div>
-  </div>
+                      <a class="text-right btn btn-outline-light mx-2" role="button" href="/accounts/login">Log In</a>
+                      <a class="text-right btn btn-outline-light" role="button" href="/accounts/signup">Register</a>
+                      {% endif %}
+                  </span>
 
-  <div class="b-example-divider"></div>
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
 
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="../../static/pic1-2-black.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Have the priviliage to ask the whole community.</h1>
-        <p class="lead">Listen - learning never stops. Join the millions of people who are able to ask and answer questions regarding learning, and also give back their own, individual, and unique knowledge. </p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Sign Up Now</button>
-         
+                  <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                      <div class="offcanvas-header">
+
+                          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                              <h5 class="mt-2 mb-0">
+                                  <a class="navbar-brand mt-lg-5" href="#">
+                                      <img src="../static/logo1-1-removebg-preview-5.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                                      MunchySite Questions
+                                  </a>
+                              </h5>
+                          </h5>
+                          <button type="button" class="btn-close text-reset bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                              <li class="nav-item">
+                                  <a class="nav-link active me-auto" aria-current="page" href="#">Log In</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link active" href="/accounts/signup">Register</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link active" href="/blogs/create">Post a Question</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link active" href="https://munchysite-a.herokuapp.com" disabled>Check for Post Replies</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle active" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      MunchyTeam Suite Tools
+                                  </a>
+
+                                  <ul class="dropdown-menu bg-dark text-light mr-auto " aria-labelledby="offcanvasNavbarDropdown">
+                                      <li><a class="dropdown-item bg-dark text-light" href="munchysite.herokuapp.com">MunchySite</a></li>
+                                      <li>
+                                          <hr class="dropdown-divider bg-white">
+                                      </li>
+                                      <li><a class="dropdown-item bg-dark text-light btn-outline-light" href="munchysite.herokuapp.com/apps">MunchyApps</a></li>
+                                      <li>
+                                          <hr class="dropdown-divider bg-white">
+                                      </li>
+
+                                      <li><a class="dropdown-item bg-dark text-light btn-outline-light" href="munchysite-q.herokuapp.com">MunchySite Questions</a></li>
+                                      <li>
+                                          <hr class="dropdown-divider bg-white">
+                                      </li>
+                                      <li><a class="dropdown-item bg-dark text-light btn-outline-light" href="munchysite-a.herokuapp.com">MunchySite Answers</a></li>
+                                      <li>
+                                          <hr class="dropdown-divider bg-white">
+                                      </li>
+                                      <li><a class="dropdown-item bg-dark text-light btn-outline-light" href="munchysite.herokuapp.com">MunchyTeam</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                          <br>
+                          <br>
+                          <!--
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                      </div>
+                  </div>
+              </div>
+          </nav>
+          <div class="b-example-divider"></div>
+          <h1 class="visually-hidden">Heroes examples</h1>
+
+          <div class="px-4 py-5 my-5 text-center bg-dark text-light">
+
+              <img class="d-block mx-auto mb-2" src="../../static/logo1-1-removebg-preview-5.png" alt="" width="100" height="100">
+              <h1 class="display-5 fw-bold mb-3">MunchySite Questions</h1>
+              <div class="col-lg-6 mx-auto">
+                  <p class="lead mb-4">The mindblowing and easy resource that allows you to become smarter and stronger without stressing a lot. </p>
+                  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                      <a type="button" href="/accounts/signup" class="btn btn-outline-light btn-lg px-4 gap-3">Sign Up</a>
+                      <a type="button" href="/blogs" class="btn btn-outline-light btn-lg px-4">Go to MunchySite Questions</a>
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="b-example-divider"></div>
+
+          <div class="px-4 pt-5 my-5 text-center border-bottom">
+              <h1 class="display-4 fw-bold">A convinient way to get your questions solved.  </h1>
+              <div class="col-lg-6 mx-auto">
+                  <p class="lead mb-4">Have you ever had a question about something you are learning that stopped you from doing whatever you were doing? Well, MunchySite Questions is here to for you to ask questions about math, language arts, social studies, and computer science.*   </p>
+                  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                      <a type="button" href="/accounts/signup"class="btn btn-primary btn-lg px-4 me-sm-3">Sign Up Now</a>
+
+                  </div>
+              </div>
+              <div class="overflow-hidden" style="max-height: 30vh;">
+                  <div class="container px-5">
+                      <img src="../../static/pic1-1.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+                  </div>
+              </div>
+          </div>
+
+          <div class="b-example-divider"></div>
+
+          <div class="container col-xxl-8 px-4 py-5">
+              <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                      <img src="../../static/pic1-2-black.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                  </div>
+                  <div class="col-lg-6">
+                      <h1 class="display-5 fw-bold lh-1 mb-3">Have the priviliage to ask the whole community.</h1>
+                      <p class="lead">Listen - learning never stops. Join the millions of people who are able to ask and answer questions regarding learning, and also give back their own, individual, and unique knowledge. </p>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                          <a type="button"  href="/accounts/signup" class="btn btn-primary btn-lg px-4 me-md-2">Sign Up Now</a>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--
+    <div class="b-example-divider"></div>
+
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 mb-3">Introducing MunchyOne</h1>
+          <p class="col-lg-10 fs-4">Yes, that's right - MunchyOne. Starting now, you have the option to use one account to enrich yourself with the whole MunchyTeam Suite of apps and tools. </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 border rounded-3 bg-light bg-dark">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control text-light bg-dark" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control text-light bg-dark" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+            <hr class="my-4">
+            <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+          </form>
         </div>
       </div>
-    </div>
-  </div>
+    </div> -->
 
-  <div class="b-example-divider"></div>
+          <div class="b-example-divider"></div>
 
-  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-      <div class="col-lg-7 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Introducing MunchyOne</h1>
-        <p class="col-lg-10 fs-4">Yes, that's right - MunchyOne. Starting now, you have the option to use one account to enrich yourself with the whole MunchyTeam Suite of apps and tools. </p>
-      </div>
-      <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-3 bg-light bg-dark">
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control text-light bg-dark" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+          <div class="container my-5">
+              <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                  <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                      <h1 class="display-4 fw-bold lh-1 mb-2">Introducing <br>MunchyOne</h1>
+                      <p class="lead">Yes, that's right - MunchyOne. Starting now, you have the option to use one account to enrich yourself with the whole MunchyTeam Suite of apps and tools.</p>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                          <a type="button" href="/accounts/signup" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Sign Up Now</a>
+                          <!--  <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button> -->
+                      </div>
+                  </div>
+                  <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                      <img class="rounded-lg-3" src="../../static/suite1-removebg-preview.png" alt="" width="400" height="400">
+                  </div>
+              </div>
           </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control text-light bg-dark" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+
+          <div class="b-example-divider"></div>
+
+          <div class="bg-dark text-light px-4 py-5 text-center">
+              <div class="py-5">
+                  <h1 class="display-5 fw-bold text-white">MunchyTeam Suite of Tools</h1>
+                  <div class="col-lg-6 mx-auto">
+                      <p class="fs-5 mb-4">Explore the many useful and intuative apps and tools MunchyTeam has to offer.</p>
+                      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                          <a type="button"  href="https://munchysite.herokuapp.com" class=" w-50 btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Let's Go!</a>
+
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"> Remember me
-            </label>
-          </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
-          <hr class="my-4">
-          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
-        </form>
-      </div>
-    </div>
-  </div>
-<!--
-  <div class="b-example-divider"></div>
 
-  <div class="container my-5">
-    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-        <h1 class="display-4 fw-bold lh-1">Border hero with cropped image and shadows</h1>
-        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">Primary</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
-        </div>
-      </div>
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-          <img class="rounded-lg-3" src="bootstrap-docs.png" alt="" width="720">
-      </div>
-    </div>
-  </div>-->
-
-  <div class="b-example-divider"></div>
-
-  <div class="bg-dark text-light px-4 py-5 text-center">
-    <div class="py-5">
-      <h1 class="display-5 fw-bold text-white">MunchyTeam Suite of Tools</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="fs-5 mb-4">Explore the many useful and intuative apps and tools MunchyTeam has to offer.</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button" class=" w-50 btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Let's Go!</button>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="b-example-divider mb-0"></div>
-</main>
+          <div class="b-example-divider mb-0"></div>
+      </main>
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
