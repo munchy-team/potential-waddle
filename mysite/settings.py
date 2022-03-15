@@ -10,8 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 import os
-import django_heroku
-import dj_database_url
 
 
 
@@ -201,4 +199,3 @@ SOCIALACCOUNT_PROVIDERS = {
 
 #Btw im going to try to add discord as a sign in option later [Hudson]
 DJANGO_SETTINGS_MODULE= 'mysite.settings'
-django_heroku.settings(locals())
