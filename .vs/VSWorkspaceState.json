@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\allauth",
-    "\\allauth\\account",
-    "\\allauth\\socialaccount",
-    "\\allauth\\templates",
-    "\\allauth\\templates\\account",
-    "\\allauth\\templates\\openid",
-    "\\allauth\\templates\\socialaccount",
-    "\\allauth\\templates\\socialaccount\\snippets",
-    "\\allauth\\templates\\tests"
+    "\\accountss",
+    "\\accountss\\templates",
+    "\\accountss\\templates\\account",
+    "\\blog",
+    "\\blog\\templates",
+    "\\blog\\templates\\blog",
+    "\\blog\\templates\\blog\\snippets",
+    "\\templates",
+    "\\templates\\snippets"
   ],
-  "SelectedNode": "\\allauth\\templates\\account\\previous-one-base.html",
+  "SelectedNode": "\\allauth",
   "PreviewInSolutionExplorer": false
 }
