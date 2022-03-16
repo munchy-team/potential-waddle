@@ -8,7 +8,9 @@ from blog.models import BlogPost
 BLOG_POSTS_PER_PAGE = 10
 
 def home_screen_view(request, *args, **kwargs):
-	
+	#user = request.user
+	#if not user.is_authenticated:
+	#	return render(request, 'account/must_authenticate.html', {})
 	context = {}
 
 	# Search

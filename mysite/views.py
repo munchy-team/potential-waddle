@@ -21,6 +21,11 @@ def home(request):
 def realhomepage(request):
  # availabilitys = Availability.objects.all()
  # messages = Message.objects.all().order_by('-Posted_At')
+ #user = request.user
+ # if user.is_authenticated:
+ #     return render(request, 'personal/home.html')#, {'messages': messages, 'availabilitys' : availabilitys })
+  #if not user.is_authenticated:
+ #     return render(request, 'home2.html')
   return render(request, 'home2.html')#, {'messages': messages, 'availabilitys' : availabilitys })
 
 # class MessageDelete(DeleteView):

@@ -4,10 +4,18 @@
 
 <div class="container">
 	<div class="d-flex flex-column">
-		<p class="m-auto text-light">You must authenticate to view this page. </p>
+		<img class="m-auto mb-0" src="../../../static/logo1-1-removebg-preview.png" alt="" width="150" height="150">
+		<h4 class="m-auto text-light">You must be authenticated to view this page. </h4>
 		<p class="text-light m-auto">
-			<a href="{% url 'register' %}">Create an account</a> or 
-			<a class="text-light" href="{% url 'account_login' %}">login</a>.
+		<!--	<a class="text-light" href="{% url 'account_signup' %}">Create an account</a> or 
+			<a class="text-light" href="{% url 'account_login' %}">login</a>. -->
+		
+			<br>
+			<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+				
+				<a type="button" href="/accounts/login" class="btn btn-outline-light px-4">Log In</a>
+				<a type="button" href="/accounts/signup" class="btn btn-outline-light px-4 gap-3 mx-2">Sign Up</a>
+			</div>
 		</p>
 	</div>
 </div>
