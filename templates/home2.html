@@ -81,7 +81,7 @@
                   <h5 class="mt-2 mb-0">
                       <a class="navbar-brand mt-lg-5" href="#">
                           <img src="../../static/logo1-1-removebg-preview-5.png" alt="" width="30" height="30" class="d-inline-block align-text-top ms-2">
-                          MunchySite Questions
+                          MunchySite Answers
                       </a>
                   </h5>
                   <span class="nav-link text-light active px-5 navbar-btn ms-auto" style="text-align: right; display: inline-block;">
@@ -108,7 +108,7 @@
                               <h5 class="mt-2 mb-0">
                                   <a class="navbar-brand mt-lg-5" href="#">
                                       <img src="../static/logo1-1-removebg-preview-5.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
-                                      MunchySite Questions
+                                      MunchySite Answers
                                   </a>
                               </h5>
                           </h5>
@@ -123,11 +123,11 @@
                                   <a class="nav-link active" href="/accounts/signup">Register</a>
                               </li>
                               <li class="nav-item">
-                                  <a class="nav-link active" href="/questions/create">Post a Question</a>
+                                  <a class="nav-link active" href="/questions/create">Post an Answer</a>
                               </li>
-                              <li class="nav-item">
+                             <!-- <li class="nav-item">
                                   <a class="nav-link active" href="https://munchysite-a.herokuapp.com" disabled>Check for Post Replies</a>
-                              </li>
+                              </li> -->
                               <li class="nav-item dropdown">
                                   <a class="nav-link dropdown-toggle active" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                       MunchyTeam Suite Tools
@@ -172,15 +172,15 @@
           <div class="px-4 py-5 my-5 text-center bg-dark text-light">
 
               <img class="d-block mx-auto mb-2" src="../../static/logo1-1-removebg-preview-5.png" alt="" width="100" height="100">
-              <h1 class="display-5 fw-bold mb-3">MunchySite Questions</h1>
+              <h1 class="display-5 fw-bold mb-3">MunchySite Answers</h1>
               <div class="col-lg-6 mx-auto">
                   <p class="lead mb-4">The mindblowing and easy resource that allows you to become smarter and stronger without stressing a lot. </p>
                   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     {% if user.is_authenticated %}
-                      <a type="button" href="/questions" class="btn btn-outline-light btn-lg px-4">Proceed to MunchySite Questions</a>
+                      <a type="button" href="/answers" class="btn btn-outline-light btn-lg px-4">Proceed to MunchySite Answers</a>
                     {% else %}
-                    <a type="button" href="/accounts/signup" class="btn btn-outline-light btn-lg px-4 gap-3">Sign Up</a>
-                    <a type="button" href="/questions" class="btn btn-outline-light btn-lg px-4">Go to MunchySite Questions</a>
+                    <a type="button" href="/answers/signup" class="btn btn-outline-light btn-lg px-4 gap-3">Sign Up</a>
+                    <a type="button" href="/answers" class="btn btn-outline-light btn-lg px-4">Go to MunchySite Answers</a>
                     {% endif %}
                   </div>
               </div>
@@ -189,9 +189,9 @@
           <div class="b-example-divider"></div>
 
           <div class="px-4 pt-5 my-5 text-center border-bottom">
-              <h1 class="display-4 fw-bold">A convinient way to get your questions solved.  </h1>
+              <h1 class="display-4 fw-bold">A convinient way to get your questions answered.  </h1>
               <div class="col-lg-6 mx-auto">
-                  <p class="lead mb-4">Have you ever had a question about something you are learning that stopped you from doing whatever you were doing? Well, MunchySite Questions is here to for you to ask questions about math, language arts, social studies, and computer science.*   </p>
+                  <p class="lead mb-4">Have you ever had a question about something you are learning during schools that stopped you from doing whatever you were doing? Well, MunchySite Answers is here to help for you to answer questions about only math, language arts, and social studies.   </p>
                   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
                       <a type="button" href="/accounts/signup"class="btn btn-primary btn-lg px-4 me-sm-3">Sign Up Now</a>
 
@@ -212,8 +212,8 @@
                       <img src="../../static/pic1-2-black.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                   </div>
                   <div class="col-lg-6">
-                      <h1 class="display-5 fw-bold lh-1 mb-3">Have the priviliage to ask the whole community.</h1>
-                      <p class="lead">Listen - learning never stops. Join the millions of people who are able to ask and answer questions regarding learning, and also give back their own, individual, and unique knowledge. </p>
+                      <h1 class="display-5 fw-bold lh-1 mb-3">Have the priviliage to answer learning-related questions from the whole community.</h1>
+                      <p class="lead">Listen - learning never stops. Join the millions of people who are able to ask and answer questions regarding learning, in-addition to also give back their own, individual, and unique knowledge to their community. </p>
                       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                           <a type="button"  href="/accounts/signup" class="btn btn-primary btn-lg px-4 me-md-2">Sign Up Now</a>
 
@@ -285,8 +285,30 @@
                   </div>
               </div>
           </div>
-
           <div class="b-example-divider mb-0"></div>
+          <div class="bg-dark text-light px-4 py-5 text-center">
+            <div class="py-5">
+         
+                <div class="col-lg-6 mx-auto">
+                    <small class="mb-4">*MunchySite Questions and MunchySite Answers can only be used to ask and answer questions ONLY regarding math, language arts, and social studies. 
+  
+                      Any posts that are not related to MunchySite approved subjects will result in the deletion of that post and the deactivation of that user who made the irrelevant post.</small>
+                   
+                </div>
+            </div>
+        </div>
+         <div class="b-example-divider mb-0"></div>
+         <div class="bg-dark text-light px-4 py-5 text-center">
+          <div class="py-5">
+       
+              <div class="col-lg-6 mx-auto">
+                                   
+                    <small class="mb-4">MunchySite Answers | MunchySite Answers and MunchySite Questions are a part of MunchyTeam and MunchySite.</small>
+              </div>
+
+          </div>
+      </div>
+      <div class="b-example-divider mb-0"></div>
       </main>
 
 
